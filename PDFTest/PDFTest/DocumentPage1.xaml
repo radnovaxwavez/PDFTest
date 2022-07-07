@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:PDFTest"
+             x:Class="PDFTest.DocumentPage1"
+             xmlns:signature="clr-namespace:Syncfusion.XForms.SignaturePad;assembly=Syncfusion.SfSignaturePad.XForms"
+             xmlns:syncfusion="clr-namespace:Syncfusion.SfPdfViewer.XForms;assembly=Syncfusion.SfPdfViewer.XForms"
+             NavigationPage.HasNavigationBar="False">
+    <!-- Use of grid made component layout objectively easier here, especially given it's dynamic -->
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="200"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+        <StackLayout Grid.Row="0" Orientation="Horizontal" WidthRequest="800">
+            <ImageButton Source="BackArrow.png" HorizontalOptions="StartAndExpand" BackgroundColor="Transparent" Clicked="BackButton"/>
+        </StackLayout>
+        <syncfusion:SfPdfViewer x:Name="pdfViewerControl" Grid.Row="1" IsToolbarVisible="False"/>
+        <signature:SfSignaturePad MinimumStrokeWidth="7" MaximumStrokeWidth="10" Grid.Row="2" BackgroundColor="AliceBlue" x:Name="signaturePadControl" />
+        <Button Grid.Row="3" Text="Save Signature" Clicked="SavePDFSignature" BackgroundColor="Transparent" BorderWidth="2" BorderColor="#1976D2" CornerRadius="10"/>
+        <Button Grid.Row="4" Text="Save PDF" Clicked="SveButton"  BackgroundColor="Transparent" BorderWidth="2" BorderColor="#1976D2" CornerRadius="10"  />
+    </Grid>
+</ContentPage>

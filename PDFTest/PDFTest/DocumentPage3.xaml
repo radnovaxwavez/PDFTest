@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:PDFTest"
+             x:Class="PDFTest.DocumentPage3"
+             xmlns:signature="clr-namespace:Syncfusion.XForms.SignaturePad;assembly=Syncfusion.SfSignaturePad.XForms"
+             xmlns:syncfusion="clr-namespace:Syncfusion.SfPdfViewer.XForms;assembly=Syncfusion.SfPdfViewer.XForms"
+             NavigationPage.HasNavigationBar="False">
+    <!-- Use of grid made component layout objectively easier here, especially given it's dynamic -->
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="200"/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+        <syncfusion:SfPdfViewer x:Name="pdfViewerControl" Grid.Row="0"/>
+        <signature:SfSignaturePad MinimumStrokeWidth="7" MaximumStrokeWidth="10" Grid.Row="1" BackgroundColor="AliceBlue" x:Name="signaturePadControl" />
+        <Button Grid.Row="2" Text="Save" Clicked="Button_Clicked"/>
+    </Grid>
+</ContentPage>

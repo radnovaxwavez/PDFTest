@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PDFTest.ExitPage">
+    <ContentPage.Content>
+        <Grid RowSpacing="50">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="300"/>
+                <RowDefinition Height="150" />
+            </Grid.RowDefinitions>
+            <Label Text="Press to Exit" 
+                   HorizontalOptions="Center" 
+                   HorizontalTextAlignment="Center" 
+                   FontAttributes="Bold" 
+                   TextColor="#1976D2"
+                   Grid.Row="0"
+                   FontSize="Large"
+                   Margin="0, 50, 0, 0"/>
+            <ImageButton 
+                Source="Exit.png" 
+                Rotation="45" Grid.Row="1" 
+                VerticalOptions="Center" 
+                Clicked="ExitAppButton" 
+                BackgroundColor="Transparent" 
+                HeightRequest="300" 
+                WidthRequest="300" 
+                Margin="0, 0, 0, 30" />
+            <Button 
+                Text="Go Back" 
+                TextColor="#1976D2"
+                Clicked="GoBackButton" 
+                Grid.Row="2"
+                VerticalOptions="End"
+                BackgroundColor="Transparent" 
+                BorderWidth="2" 
+                BorderColor="#1976D2" 
+                CornerRadius="10"
+                Margin="25, 0, 25, 0"
+                 />
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
